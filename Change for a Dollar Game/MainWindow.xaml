@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Change_for_a_Dollar_Game"
         mc:Ignorable="d"
-        Title="Change for a Dollar Game!" ResizeMode="NoResize" Height="470" Width="800">
+        Title="Change for a Dollar Game" ResizeMode="NoResize" Height="470" Width="800">
     <Grid Background="#906F47">
         <Grid.RowDefinitions>
             <RowDefinition Height="14*"></RowDefinition>
