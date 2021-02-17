@@ -1,0 +1,22 @@
+﻿<Window x:Class="Change_for_a_Dollar_Game.How_to_Play"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Change_for_a_Dollar_Game"
+        mc:Ignorable="d"
+        Title="How to Play" ResizeMode="NoResize" Height="490" Width="420">
+    <Grid Background="#906F47">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="15" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" Text="{Binding Info}"></TextBlock>
+        <StackPanel Grid.Row="1" Margin="20">
+            <TextBlock Text="{Binding PennyInfo}" Foreground="#E9DFD4" Margin="10" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Text="{Binding NickelInfo}" Foreground="#E9DFD4" Grid.Row="1" Margin="10" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Text="{Binding DimeInfo}" Foreground="#E9DFD4" Grid.Row="1" Margin="10" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Text="{Binding QuarterInfo}" Foreground="#E9DFD4" Grid.Row="1" Margin="10" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" ></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

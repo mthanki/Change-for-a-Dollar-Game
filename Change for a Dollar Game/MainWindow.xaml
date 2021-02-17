@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Change_for_a_Dollar_Game"
         mc:Ignorable="d"
-        Title="Change for a Dollar Game" ResizeMode="NoResize" Height="470" Width="800">
-    <Grid  Background="#906F47">
+        Title="Change for a Dollar Game!" ResizeMode="NoResize" Height="470" Width="800">
+    <Grid Background="#906F47">
         <Grid.RowDefinitions>
             <RowDefinition Height="14*"></RowDefinition>
             <RowDefinition Height="4*"></RowDefinition>
@@ -42,7 +42,11 @@
                 <Image Stretch="Fill" Source="Images\Refresh.png"></Image>
             </Button>
         </StackPanel>
-        <Label HorizontalContentAlignment="Center" Foreground="#E9DFD4" FontStyle="Italic" VerticalContentAlignment="Top" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="4" FontSize="14" Content="100 cent = 1 Dollar"></Label>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Label HorizontalContentAlignment="Center" Foreground="#E9DFD4" FontStyle="Italic" VerticalContentAlignment="Top" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="4" FontSize="14" Content="100 cent = 1 Dollar"></Label>
+            <Button Name="InfoButton" Click="InfoButton_Click" Margin="0" Padding="0" FontSize="18" Cursor="Hand" Background="#00070486" Foreground="#E9DFD4" BorderThickness="0" Style="{DynamicResource TextFolllowUpButton}">ⓘ
+            </Button>
+        </StackPanel>
         <Button Cursor="Hand" Grid.Row="4" Grid.ColumnSpan="4" Click="Calculate_Click" FontSize="30" FontWeight="Bold" Foreground="#DED4B0" Background="#1D0E07" Style="{DynamicResource RemoveHover}">GO!</Button>
     </Grid>
 </Window>

@@ -51,5 +51,11 @@ namespace Change_for_a_Dollar_Game
         {
             vm.ResetGame();
         }
+
+        private void InfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            How_to_Play info = new How_to_Play();
+            info.Show();
+        }
     }
 }
