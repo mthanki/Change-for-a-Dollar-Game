@@ -6,6 +6,8 @@ namespace Change_for_a_Dollar_Game
 {
     class VM : INotifyPropertyChanged
     {
+        #region Constants
+        const int CENTS_IN_DOLLAR = 25;
         const int PENNY = 1;
         const int NICKEL = 5;
         const int DIME = 10;
@@ -13,6 +15,7 @@ namespace Change_for_a_Dollar_Game
 
         const string START_UP_MESSAGE = "Pick a number of Coins & Hit GO to start playing!";
         const string WIN_MESSAGE = "WINNER, that makes a Dollar!";
+        #endregion
 
         #region Properties
         private int penny = 0;
@@ -62,7 +65,7 @@ namespace Change_for_a_Dollar_Game
         {
             int Result;
             int TotalCents = (Penny * PENNY) + (Nickel * NICKEL) + (Dime * DIME) + (QUARTER * Quarter);
-            Result = 100 - TotalCents;
+            Result = CENTS_IN_DOLLAR - TotalCents;
             UpdateResultLabel(Result);
         }
 
@@ -108,8 +111,6 @@ namespace Change_for_a_Dollar_Game
 
         public void IncrementCoinCount(object prop)
         {
-            var CoinSelected = prop;
-
             switch (prop)
             {
                 case "Penny":
@@ -129,9 +130,8 @@ namespace Change_for_a_Dollar_Game
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         #region Property Changed
+        public event PropertyChangedEventHandler PropertyChanged;
         private void propertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
