@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Change_for_a_Dollar_Game
 {
-    enum Coins
-    {
-        Penny,
-        Nickel,
-        Dime,
-        Quarter
-    }
-
     class VM : INotifyPropertyChanged
     {
         const int PENNY = 1;
@@ -26,33 +14,39 @@ namespace Change_for_a_Dollar_Game
         const string START_UP_MESSAGE = "Pick a number of Coins & Hit GO to start playing!";
         const string WIN_MESSAGE = "WINNER, that makes a Dollar!";
 
+        #region Properties
         private int penny = 0;
-        public int Penny {
+        public int Penny
+        {
             get { return penny; }
-            set { penny = value; propertyChanged(); } 
+            set { penny = value; propertyChanged(); }
         }
 
         private int nickel = 0;
-        public int Nickel {
+        public int Nickel
+        {
             get { return nickel; }
-            set { nickel = value; propertyChanged(); } 
+            set { nickel = value; propertyChanged(); }
         }
 
         private int dime = 0;
-        public int Dime { 
+        public int Dime
+        {
             get { return dime; }
-            set { dime = value; propertyChanged(); } 
+            set { dime = value; propertyChanged(); }
         }
 
         private int quarter = 0;
-        public int Quarter { 
+        public int Quarter
+        {
             get { return quarter; }
-            set { quarter = value; propertyChanged(); } 
+            set { quarter = value; propertyChanged(); }
         }
 
         private string result = START_UP_MESSAGE;
-        public string Result { 
-            get { return result; } 
+        public string Result
+        {
+            get { return result; }
             set { result = value; propertyChanged(); }
         }
 
@@ -62,6 +56,7 @@ namespace Change_for_a_Dollar_Game
             get { return resetButtonVisibility; }
             set { resetButtonVisibility = value; propertyChanged(); }
         }
+        #endregion
 
         public void CalculateResult()
         {
