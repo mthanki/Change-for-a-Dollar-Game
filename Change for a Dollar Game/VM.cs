@@ -7,7 +7,7 @@ namespace Change_for_a_Dollar_Game
     class VM : INotifyPropertyChanged
     {
         #region Constants
-        const int CENTS_IN_DOLLAR = 25;
+        const int CENTS_IN_DOLLAR = 100;
         const int PENNY = 1;
         const int NICKEL = 5;
         const int DIME = 10;
